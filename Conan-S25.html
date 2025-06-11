@@ -3,61 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies the media</title>
-  <link href="https://cdn.icon-icons.com/icons2/125/PNG/96/movies_drive_20265.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <title>Detective.Conan.S25</title>
+  <link href="https://raw.githubusercontent.com/aminemk640/Movies-free/refs/heads/main/00.png" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>  
-<script src="https://rawcdn.githack.com/ahmadmk2023/LIVE-SORT/8dc8ab39981cbefec033b87a1d179b6eafc6989d/watched-icon.js"></script>  
- </head>
- <body>
- <html>
-
+ <!-- إضافة jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     <!-- إضافة watched-icon -->
+    <script src="https://raw.githack.com/ahmadmk2023/code-java/main/watched-icon-V2.js"></script>  
+ </head>   
+<body>
 
     <!----------  اكواد استايل القائمة  ------------>
-    <style>
+     <style>
          body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-   z-index: 999; /* لضمان ظهوره فوق المحتوى */
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
         }
 
-        .topnav {
-          position: fixed;
-overflow: hidden;
-border-radius:4px;
-   background-image: linear-gradient(132deg, #3c4a71 0%, #339a8a 100%);
-z-index: 999; /* لضمان ظهوره فوق المحتوى */
-top: 0;
-height: 52px;
-width: 100%;
-box-shadow: 5px 5px 7px #fff;
-z-index: 1;
+        .topnav { 
+        border-top : 3px solid #FFD700;  
+        z-index: 2; /* لضمان ظهوره فوق المحتوى */
+        position: fixed;
+        overflow: hidden;
+        border-radius:4px;
+        background-image: linear-gradient(132deg, #3c4a71 0%, #339a8a 100%);
+        top: 0;
+        height: 58px;
+        width: 100%;
+        box-shadow: 5px 5px 7px #fff;
 }  
 
         .topnav a {
             float: left;
             color: #ffffff;
             text-align: center;
-            padding: 14px 16px;
+            padding: 13px 13px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 16px;
         }
-       .topnav a:focus,.topnav a:hover {
-            background-color: #ccc; /* يمكنك تغيير اللون إلى أي لون تفضله */
-            color: #000; /* تغيير لون النص إلى اللون المناسب للخلفية */
-            outline: none; /* إزالة تأثير الـ focus الافتراضي */
-            border-radius: 8px; border: 2px solid #ff0066;
-        }
+       .topnav a:focus, .topnav a:hover {
+ background: #ccc;
+    color: #000;
+    outline: none;
+    border: 2px solid #ff0066;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066, 0 0 160px #ff0066, 0 0 320px #ff0066;  
+}
+.topnav a:focus svg path,
+.topnav a:hover svg path {
+  fill: #000; /* تغيير لون الملء للمسار إلى الأسود */
+  outline: none; /* إزالة تأثير التركيز الافتراضي */
+  border-radius: 8px;
+  border: 2px solid #ff0066;
+}
         .topnav-centered a {
-
+            font-family: "Airarabia", Sans-serif;
             float: none;
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 50%;            
+            font-size: 20px;
             transform: translate(-50%, -50%);
         }
 
@@ -81,10 +90,8 @@ z-index: 1;
                 color: #ffff;
             }
         }
-    </style>
 
-    
-    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
    body {
                 height: 100%;
                 margin: auto;
@@ -92,108 +99,95 @@ z-index: 1;
            background:#339a8a;
              background-position: center;
                 align-items: center;
-                justify-content: center;
+                justify-content: center; 
+                font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
            
             }
 
            .button {
-                 position: relative;
-                align:center;
-                display: inline-block; /* لجعل الزر عنصراً مستطيل الشكل */
+            position: relative; 
+            display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 16px;
+      padding: 20px;
+            align:center;
+            display: inline-block; /* لجعل الزر عنصراً مستطيل الشكل */
             padding:2px; /* تعيين الهامش الداخلي للزر */
             border-radius: 8px; /* تدوير الزوايا لتصميم أفضل */
             width: 155px;
-            height: 215px;
-                margin: 6px;
-              border-color: #000;
-                 background: #3c4a71; 
+            height:225px;
+            margin: 6px;
+            border: 2px solid #ccc;
+            background: rgba(0, 0, 0, 0.6);
+
             }
-
- 
-
-          button img {
-         width: 100%; /* تحكم في عرض الصورة */
-    height: 105px; /* احتفاظ بالتناسب أثناء تغيير الحجم */
-    margin: -1px auto; /* تحكم في التباعد بين الصورة والعناصر الأخرى */
-    display: block; /* جعل الصورة تظهر بشكل مستقل */
-    border-radius: 4px; /* تحديد إطار بسمك 2 بكسل ولون أزرق */
-
+          .button img {
+  background-size: cover; /* جعل الصورة تمتد لتغطي الحاوية بالكامل */
+    background-position: center;    
+    background-size: 100% 100%; /* جعل الصورة تمتد لتغطي الحاوية بالكامل */
+    background-repeat: no-repeat; /* منع تكرار الصورة */
+    width: 100%; /* ضمان أن العرض 100% */
+    height: 105px; /* تعديل الارتفاع حسب الحاجة */
+    position: relative; /* إضافة لتحديد موضع العناصر داخل الحاوية */
+    border-radius: 4px; /* تدوير الزوايا لتصميم أفضل */
 }
- #remot:focus,#remot:hover {
-         background: #ccc; /* لون	 خلفية الزر */
-         color: #000 ;
-          border-radius: 50%;
-          outline: none; /* إزالة تأثير الـ focus الافتراضي */
-             border: 2px solid #ff0066;
-            transform: scale(1.5);
-        }
+
   
             /* .ازالة شريط التمرير اسفل المدونة*/
-            html {
-                
-            }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-            /* ازالة تغيير شكل السكرول بار Scroll.Bar */
-            ::-webkit-scrollbar {
-                width: 8px;
-                height: 105px;
-               overflow-x: hidden; 
-                /**  تغير  لون القائمة **/
-            }
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 7px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  border-radius: 10px;
+}
 
-            ::-webkit-scrollbar-thumb {
-                -webkit-shadow: inset 0 0 0 #000000;
-                -webkit-border-radius: 0;
-                background-image: -webkit-linear-gradient(top, #111 100%, #000 100%);border-radius: 12px;
-            }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
 
-            ::-webkit-scrollbar-track {
-                -webkit-shadow: inset 0 0 0 #000000;
-                -webkit-border-radius: 100px;
-            }
-
-.lkhat1 {
-position: relative; 
-        align:center;
-        padding:2px; /* تعيين الهامش الداخلي للزر */
-        text-align: center;
-        font-size: 15px;
-       color: #fff;
-         font-weight: bold  ;
-     margin-top: 5px ;
-      align-items: center;
-      justify-content: center;
-    width: 140px;
-    height: 18px;
+.link,.mov-name {
+ padding: 3px;
+    text-align: center;
+    font-size: 18px;
+     color: #fff;
+    font-family: "Airarabia", Sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
     border-radius: 8px;
-   border:2px solid gold;
-      
-      
+    top:-10px;
+    border-top: 2px solid #d0368a;
+    margin-top:4px;
+    width: 140px; /* عرض الحاوية */
+    height: 20px;
         }
-        
-.khlfia {
-    background: #fff; /* لون	 خلفية الزر */
-    position: relative;
-    padding:2px; /* تعيين الهامش الداخلي للزر */
-        text-align: center;
-        font-size: 15px;
-       color: #000;
-         font-weight: bold  ;
-      margin-top: 5px;
-      align-items: center;
-      justify-content: center;
-    width: 140px;
-    height: 18px;
-    border-radius: 4px;
-   border:2px solid #000;
-        }      
-
-      .number-container {
+       .mov-name {
+    direction: ltr;  /* تحديد اتجاه النص من اليمين لليسار */
+    text-align: right;  /* محاذاة النص إلى اليمين */
+  }
+   
+     .number-container {
             display: flex;
             justify-content: space-around;
             width: 100%;
-            margin-top: 5px;
-          
+            margin-top: 5px;  
         }
 
         .number {
@@ -201,15 +195,28 @@ position: relative;
             width: 30px;
             height: 30px;
              background:#339a8a;
-            border-radius: 50%;
-             border:3px solid #333;
+            border-radius: 8px;
+             border: 2px solid #fff;
             color: #FFF;
-         font-size: 12px;
-         font-weight: bold  ;
+         font-family: "Airarabia", Sans-serif;
+    font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+        }
+        
+       /* تأثير عند التركيز (للتحكم عن بُعد على Android TV) */
+   
+ .number:focus,.number:hover {
+    background: #ccc;
+    color: #000;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #ff0066;
+    transform: scale(1.5);
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066, 0 0 160px #ff0066, 0 0 320px #ff0066;
         }
 
        a{
@@ -221,491 +228,899 @@ color: yellow;
 text-decoration:none;
 
 }
-                #page {
-            margin-top: 55px;
-            width: 100%;
-        }
+   main {
+    padding: 5px;position: relative;
+    margin-top: 60px; /* تترك مساحة للشريط العلوي */
+    margin-bottom: 70px; /* تترك مساحة للقائمة السفلية */
+}
         
-                
-/* تظهر الأيقونة أعلى الزجاجية */
-.watched-icon {
-    position: absolute;
-    top: 0;
-    left: 0; /* يمكنك ضبط القيمة الأفضل حسب تصميمك */
-    width: 20px;
-    height: 20px;
-     /* لجعلها تظهر فوق الزجاجية */
-    background:#fff; /* لخلفية زجاجية بلون أبيض شفاف */
-    border-radius: 5px; /* للزوايا المستديرة */
-    border:2px solid #000;
-    padding: 5px; /* تعديل حجم الأيقونة داخل الزجاجية */
-}
-.watched-icon-img{
+   
+        tv-name-inner {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+ font-family: "Arial", sans-serif;  /* اختيار خط مناسب للغة العربية */
 
-    width: 25px;
-    height: 25px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+  
+#searchbar-container {
+    position: relative;
+    width: 70%;
+    margin: 10px auto;
+    direction: rtl;
+
+}
+ #searchbar:focus,#searchbar:hover {
+       background: #ccc;
+    color: #000;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #ff0066;
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066;
+    }
+#searchbar {
+    width: 100%;
+    padding: 10px;margin-top:10px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 35px;
+    border: 2px solid gold;
+    box-sizing: border-box;
+    display: none; /* Initially hide the search bar */
+}
+
+#searchbar.show {
+    display: inline-block;
+}
+
+
+.x{
+    background: #2222;
+        position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none; /* Initially hide the close icon */
+    color: #000;
+    top:27px;
+    left:5px;
+    font-size: 16x;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #000;
+box-shadow: 0 0 5px #000;
+        }
+.x:focus,.x:hover {
+    background: #2222;
+    color: #000;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #ff0066;
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066;
+        }
+#close-icon.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+    .search-input {
+    padding: 8px;
+    font-size:15px; 
+     font-weight: bold  ;
+         color: #000;
+
+     }
     
+    #no-results-message { 
+    color: red;              
+    font-family: "Montserrat", serif;
+    margin-top: 10px;
+    font-size: 25px; 
+     font-weight: bold;
+     }
+     
+    /* تظهر الأيقونة أعلى الزجاجية */
+        .watched-icon {
+            position: absolute; 
+            background: #fff;
+            border-radius: 4px;
+            border: 2px solid #ff0066;
+            box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            display: none; /* Initially hide the watched icon */
+        } 
+          #fin:last-child {
+    border-bottom: none;
+    color: #FFD700;
+    font-weight: bold;
+    
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066;
 }
-
                 </style>
                 
                 
           <!-- Top navigation -->
             <div class="topnav">
-                <!-- ISIM TATBI9 -->
-                <div class="topnav-centered">
-                 <a><h5>المحقق كونان الموسم 25</h5> </a>
-                </div>
-                <!-- ISIM TATBI9 -->
+               <!-- icon-reply -->
+<div class="topnav-centered">
+                 <a><h5>كونان الموسم 25</h5> </a></div>
+               <!-- icon-reply -->
 
-                <!-- ZIR ROJO3 -->
-                <a href="go:afmv ">
-                    <i  class="fa fa-reply fa-beat"style="font-size: 20px;"></i>
+                  <!-- icon-reply -->
+                <a onclick="window.open('go:1')"tabindex="0">
+    <svg width="25" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path d="M209.4 39.5c-9.1-9.6-24.3-10-33.9-.9L33.8 173.2c-19.9 18.9-19.9 50.7 0 69.6L175.5 377.4c9.6 9.1 24.8 8.7 33.9-.9s8.7-24.8-.9-33.9L66.8 208 208.5 73.4c9.6-9.1 10-24.3 .9-33.9zM352 64c0-12.6-7.4-24.1-19-29.2s-25-3-34.4 5.4l-160 144c-6.7 6.1-10.6 14.7-10.6 23.8s3.9 17.7 10.6 23.8l160 144c9.4 8.5 22.9 10.6 34.4 5.4s19-16.6 19-29.2l0-64 32 0c53 0 96 43 96 96c0 30.4-12.8 47.9-22.2 56.7c-5.5 5.1-9.8 12-9.8 19.5c0 10.9 8.8 19.7 19.7 19.7c2.8 0 5.6-.6 8.1-1.9C494.5 467.9 576 417.3 576 304c0-97.2-78.8-176-176-176l-48 0 0-64z"></path>
+    </svg>
                 </a>
-                <!-- ZIR ROJO3 -->
-
-<img src="https://cdn.icon-icons.com/icons2/12/PNG/256/movies_movie_oscar_themedia_1735.png"style="width: 45px;
-    height: 38px; margin-top: 7px;border-radius: 8px;" alt="">
-                <!-- ZIR LBAHT-search -->
+                   <!-- icon-reply -->
+                   
+                 <!-- icon-logo -->
+<a > <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="24px"viewBox="0 0 24 24" height="24px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M18 4l2 3h-3l-2-3h-2l2 3h-3l-2-3H8l2 3H7L5 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4m-6.75 11.25L10 18l-1.25-2.75L6 14l2.75-1.25L10 10l1.25 2.75L14 14l-2.75 1.25m5.69-3.31L16 14l-.94-2.06L13 11l2.06-.94L16 8l.94 2.06L19 11l-2.06.94z" fill="#fff"></path></svg>
+        </a>
+      
+   <!-- icon-logo -->
                 
-                
-                <div class="topnav-right">
-                    <a href="http://action_search/"><i class="fa fa-search fa-beat" style="font-size: 20px;"></i></a>
-                    <!-- ZIR LBAHT-search -->
-
-                </div>
-
-            </div>              
-
-<div align="center" >
-<div class="container">
-<div id="page">
-<div class="section" data-section="Conan-S25">
-        <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1101</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvdDMxbzF6cWtxdTVucWg5YXhlc3BtL2NvbmFu
-czI1LWVwMTEwMS50cz9ybGtleT05aXV3ajcyZTUzdXl3Y2V3b3J5cTh6bmltJnN0PWlhcW5hbTlu
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/PsqZpcHxku"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/5XdIjVmMfa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->                          
-
-        <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1102</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvcHgycmU0azQ2ejduMTc2aGYwbWZ2L2NvbmFu
-czI1LWVwMTEwMi50cz9ybGtleT1wNW9pYXNpOXB0bWE2OTBzNjd2cmo4dWw5JnN0PWRqc2h2d2Nv
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/b5DrBHOkfa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/xBBQ2WEbjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++--> 
-       <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1103</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvbHQ2bXk4MTVhbGN3eGVhMXZuNWxoL2NvbmFu
-czI1LWVwMTEwMy50cz9ybGtleT1wZXM3bDBlcHAwbGloZW1jdzJudXBjNTFzJnN0PWJ5cmtqOW9j
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/jT1Yl7GMfa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/jT1Yl7GMfa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->
-               
-               
-  <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1104</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkveDhhbTlrajhkNnhscms1OHJheDhsL2NvbmFu
-czI1LWVwMTEwNC50cz9ybGtleT1tdXl0OWJ1eHd4eGNraHJ2N3hhNW1pbGEwJnN0PTZucmxibDB2
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/IFXu9zjtfa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/IFXu9zjtfa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-               
-  <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1105</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvd3NxeWxqaDQxa2EwY2V5cDI1Zm1lLzExMDUu
-dHM/cmxrZXk9dnFoNXRmcWF3Znd5cWZ3OTF5bmozOW80dSZzdD1ieGZqeDN0cyZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/GGyjOJ2Tjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/GGyjOJ2Tjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->  
-               
-               
-                     
-  <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1106</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvcmhjaDcxdHIwd2VtOHhqODgwZHhqLzExMDYu
-dHM/cmxrZXk9Y3RyNHV3dnVydnhqcXJ5cmNuMmhsamF2ZiZzdD14ZXdudHo2cSZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/Xh7DjOl2jq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/Xh7DjOl2jq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->          
-               
-                         
-  <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1107</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvMzJ4a2ZrdW83ZnlvbHU1bWdyaHNmLzExMDcu
-dHM/cmxrZXk9dzUxNzQ3OGxhY2RiMGQ3NDN5YXk5aGdmcyZzdD0zdzc0YjBieiZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/Cs2p1kiHjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/Cs2p1kiHjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->            
-         <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1108</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvaWJ5cHVkcXNsaXJ3b3l5YmNnbWNjLzExMDgu
-dHM/cmxrZXk9NndqdmJ0YzBpanczd3JlZmozcWR5NjA2biZzdD01MDk4ZnljYiZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/zc6WPBaUge"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/zc6WPBaUge"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++--> 
-               
-    <!--+++++++++++++++++-->  
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1109</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvdTVwc2FoZGhzZGNmZ2E3bnNieDB6LzExMDku
-dHM/cmxrZXk9eG9wM3d4Nzh3cWN3NHFmMWRibWg3aGs0NyZzdD03M2x3aHl3ZiZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/rMABJSY5ku"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/rMABJSY5ku"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->                 
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1110</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvYW81a3B4ZG05aDZqanFmeHFndzVzL2NvbmFu
-czI1LWVwMTExMC5tcDQ/cmxrZXk9MzQ2dW44cDZhMzZubzF1Y3IzM3VpaXdocyZzdD03cTJob2l3
-dCZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/QZ1URF3Rjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/QZ1URF3Rjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->                              
-         
-<button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1111</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkveHQ1YjQxeTc2aXVlYnhlc2o2bWpyL2NvbmFu
-czI1LWVwMTExMS50cz9ybGtleT1va3Z1aHF3aDhvaHBrMHFsZmFoeDMzNDdvJnN0PTAwNjU2ZHlm
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/b8Y7YUQDjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/b8Y7YUQDjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-               <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1112</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkva2h2bHFqMTRzbzZsMHkyeWJ5eGM5L2NvbmFu
-czI1LWVwMTExMi5tcDQ/cmxrZXk9ajlkdHV2eXFkMmxtbjVvc3NnMmYwZ3FlcyZzdD15dGk0czAx
-bSZkbD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="intent://aHR0cHM6Ly9kYzYxMS40c2hhcmVkLmNvbS9pbWcvX0JRcnRpVzFnZS9mZjNiZDcwMi9kbGlua19f
-MkZkb3dubG9hZF8yRl81RkJRcnRpVzFnZV8zRnNic3JfM0QwMTg5M2U5MmU3MDQ5YzAxYjY4YTk2
-MmY5NDM3OTkzM2IxMl8yNmJpcF8zRE1UazJMakV5Tnk0eU1qWXVNVGt6XzI2bGdmcF8zRDY2XzI2
-ZHNpZF8zRFJhRm0yQ2ozLjU3ZTk0ODhlNDg2ZWVmNzZkNDI5ZDQxN2M2OWNlMzhjXzI2YmlwXzNE
-TVRrMkxqRXlOeTR5TWpZdU1Ua3pfMjZiaXBfM0RNVGsyTGpFeU55NHlNall1TVRrei9wcmV2aWV3
-Lm1wND9jdWlkPTE1MjAwNDcwNTImY3VwYT1lNDk2Yzg5ODYxYjFhZDk5ZDMxYWFjYTliZjkwYjRm
-Yg==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/_BQrtiW1ge"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>              
-         <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1113</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvOW1sNmhoN3VsM29leWplbWM1ZjRzL2NvbmFu
-czI1LWVwMTExMy50cz9ybGtleT03M3UxbDJwdGJ6cHJ6emJidzJlbzhmemFsJnN0PWJiY3N6ZDYx
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/QZ1URF3Rjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/QZ1URF3Rjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>             
-     <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1114</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvNXNra3A3d3JjanNkc2lnc3Q4N3BqL2NvbmFu
-czI1LWVwMTExNC50cz9ybGtleT04c29wbHBrOWliZHN4OWU4cXprMTU5dXR2JnN0PTNhbXd4ZXRy
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/e7Uas0R1fa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/e7Uas0R1fa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>             
-           <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1115</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvampjbThrMXJ6bGZsenIyZzEwZXltL2NvbmFu
-czI1LWVwMTExNS50cz9ybGtleT14MHl2cjNmbGVkc2F3M2UzOTRieXZsMHJwJnN0PWZ5a3J0N2Vo
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/9YoxoCH0fa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/9YoxoCH0fa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>  
-
-           <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1116</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvMjBpYWJmYXNneGV6Y3piZWxwaHBpL2NvbmFu
-czI1LWVwMTExNi50cz9ybGtleT1qNmU0d25vNW1qYzNxZzdqZnU5bGRpbmp4JnN0PWQ0azBuc3g4
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/DOVcWXlnjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/DOVcWXlnjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-           <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1117</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvbTZxcmgxYTNlODdnbDkzNTI5dXdnL2NvbmFu
-czI1LWVwMTExNy50cz9ybGtleT1vbnpqanUwOXFqZnI3MTQxNHVyb2xrazF4JnN0PW5wMmMyc25p
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/0bWz1Lrojq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/0bWz1Lrojq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-  <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1118</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvcWptOGFxbWkydWVhNDMyenV1d3R3L2NvbmFu
-czI1LWVwMTExOC50cz9ybGtleT03d2V5MDB1d2I2MW1yejVvNWJ3Z2s1MHp5JnN0PXh1OWc3NW9l
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/VHFHSDdmjq"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/VHFHSDdmjq"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-           <!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1119</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvYThvZG11eGJydDRhaWppOTk2ZmRvL2NvbmFu
-czI1LWVwMTExOS50cz9ybGtleT1ic3BzbjcxZHM5MDV5eWx1enBrc2tkd2h6JnN0PXhrOGpiaXo2
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/IAdXPAxBfa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/IAdXPAxBfa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-  <!--+++++++++++++++++-->   
-               
-
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1120</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6L2RsLmRyb3Bib3guY29tL3NjbC9maS9pbWgzanEzOGQ0dnI3a25peTI5bzkvY29uYW5z
-MjUtZXAxMTIwLnRzP3Jsa2V5PWYxbWhrdWk5enZrdnFzcHFndWVmZzZyY3Imc3Q9cnNyN3hqdGEm
-ZGw9MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/d774Wuj9ku"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/d774Wuj9ku"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-<!--+++++++++++++++++-->   
-               
- <button class="button"><img src="https://animezid.org/uploads/thumbs/ea1cb330e-1.jpg" alt="app tv">
-        <div class="lkhat1">episode 1121</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
-                        <!-- إضافة شكل الأرقام الدائرية -->
-                        <div class="number-container">  <div> 
-<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
-</div>
-   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvdXZjZTU1N3loMmZydHZ2eXZhdzM4L2NvbmFu
-czI1LWVwMTEyMS50cz9ybGtleT1kajR1dmpnajUxdHlob2sya3BlOGdtM3dhJnN0PWY2cHo2b2R3
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
-                                        
-<a href="https://www.4shared.com/web/embed/file/2SZJTguCfa"><div id="remot" tabindex="1" class="number" >2</div></a>  
-
-<a href="https://www.4shared.com/web/embed/file/2SZJTguCfa"><div id="remot" tabindex="1" class="number">3</div></a></div ></button>
-
-
-               
-  </div> 
- </div>
-     </div>  
-      </div> </div>
-    <script>
-    // تُحجب النافذة المنبثقة
-window.open('https://javascript.info');
-    
-let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=0,height=0,left=-1000,top=-1000`;
-
-open('/', 'test', params);
-
-
-let newWindow = open('/', 'example', 'width=300,height=300');
-
-newWindow.onload = function() {
-  newWindow.close();
-  alert(newWindow.closed); // true
-};
-
-
-
-
-
-    
-export default {
-  name: 'ContentComponent',
-  data() {
-    return {
-      contentUrl: 'https://streamzid.online/e/2wu4nh9vbii3'
-    }
-  },
-  beforeMount() {
-    this.blockPopups()
-  },
-  methods: {
-    blockPopups() {
-      // تعطيل النوافذ المنبثقة
-      window.open = function() {}
-      window.alert = function() {}
-      window.confirm = function() {}
-      window.prompt = function() {}
-    }
-  }
-  // تعطيل جميع النوافذ المنبثقة
-window.open = function() { return null; }
-window.alert = function() { }
-window.confirm = function() { return false; }
-window.prompt = function() { return null; }
+   <!-- icon-search -->                
+<div class="topnav-right">
+<a tabindex="1" href="javascript:void(0)" id="search-icon"><svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" width="25" height="25" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#fff" stroke-width="4" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+            </svg></a></div> </div>
   
-}
+            
+       <main>     
+
+<div align="center" id="searchbar-container">
+    <input id="searchbar" 
+           onkeyup="search_animal();" 
+           type="text" 
+           name="search" 
+           placeholder="ابحث عن الحلقه او رقم .." 
+           tabindex="1">
+<button tabindex="1"id="close-icon"class="x">❌</button></div>
+              <!--+++++++++++++++++-->
+              <div class="section" data-section="Conan-S25">
+ 
+        <!--+++++++++++++++++--> 
+      <div align="center" >
+
+<!-- ✅  زر الفيلم -->
+             <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1101-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/t31o1zqkqu5nqh9axespm/conans25-ep1101.ts?rlkey=9iuwj72e53uywceworyq8znim&st=iaqnam9n&dl=1#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/t31o1zqkqu5nqh9axespm/conans25-ep1101.ts?rlkey=9iuwj72e53uywceworyq8znim&st=iaqnam9n&dl=1#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/t31o1zqkqu5nqh9axespm/conans25-ep1101.ts?rlkey=9iuwj72e53uywceworyq8znim&st=iaqnam9n&dl=1#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button> 
+      <!-- ✅  زر الفيلم -->
+                          <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1102-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/px2re4k46z7n176hf0mfv/conans25-ep1102.ts?rlkey=p5oiasi9ptma690s67vrj8ul9&st=djshvwco&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/px2re4k46z7n176hf0mfv/conans25-ep1102.ts?rlkey=p5oiasi9ptma690s67vrj8ul9&st=djshvwco&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/px2re4k46z7n176hf0mfv/conans25-ep1102.ts?rlkey=p5oiasi9ptma690s67vrj8ul9&st=djshvwco&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button> 
+      <!-- ✅  زر الفيلم -->
+                          <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1103-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/lt6my815alcwxea1vn5lh/conans25-ep1103.ts?rlkey=pes7l0epp0lihemcw2nupc51s&st=byrkj9oc&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/lt6my815alcwxea1vn5lh/conans25-ep1103.ts?rlkey=pes7l0epp0lihemcw2nupc51s&st=byrkj9oc&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/lt6my815alcwxea1vn5lh/conans25-ep1103.ts?rlkey=pes7l0epp0lihemcw2nupc51s&st=byrkj9oc&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+       <!-- ✅  زر الفيلم --> 
+<button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1104-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/x8am9kj8d6xlrk58rax8l/conans25-ep1104.ts?rlkey=muyt9buxwxxckhrv7xa5mila0&st=6nrlbl0v&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/x8am9kj8d6xlrk58rax8l/conans25-ep1104.ts?rlkey=muyt9buxwxxckhrv7xa5mila0&st=6nrlbl0v&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/x8am9kj8d6xlrk58rax8l/conans25-ep1104.ts?rlkey=muyt9buxwxxckhrv7xa5mila0&st=6nrlbl0v&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+ <!-- ✅  زر الفيلم --> 
+       <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1105-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/wsqyljh41ka0ceyp25fme/1105.ts?rlkey=vqh5tfqawfwyqfw91ynj39o4u&st=bxfjx3ts&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/wsqyljh41ka0ceyp25fme/1105.ts?rlkey=vqh5tfqawfwyqfw91ynj39o4u&st=bxfjx3ts&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/wsqyljh41ka0ceyp25fme/1105.ts?rlkey=vqh5tfqawfwyqfw91ynj39o4u&st=bxfjx3ts&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+       <!-- ✅  زر الفيلم --> 
+       <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1106-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/rhch71tr0wem8xj880dxj/1106.ts?rlkey=ctr4uwvurvxjqryrcn2hljavf&st=xewntz6q&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/rhch71tr0wem8xj880dxj/1106.ts?rlkey=ctr4uwvurvxjqryrcn2hljavf&st=xewntz6q&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/rhch71tr0wem8xj880dxj/1106.ts?rlkey=ctr4uwvurvxjqryrcn2hljavf&st=xewntz6q&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+       <!-- ✅  زر الفيلم --> 
+<button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1107-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/32xkfkuo7fyolu5mgrhsf/1107.ts?rlkey=w517478lacdb0d743yay9hgfs&st=3w74b0bz&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/32xkfkuo7fyolu5mgrhsf/1107.ts?rlkey=w517478lacdb0d743yay9hgfs&st=3w74b0bz&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/32xkfkuo7fyolu5mgrhsf/1107.ts?rlkey=w517478lacdb0d743yay9hgfs&st=3w74b0bz&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+ <!-- ✅  زر الفيلم --> 
+       <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1108-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ibypudqslirwoyybcgmcc/1108.ts?rlkey=6wjvbtc0ijw3wrefj3qdy606n&st=5098fycb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ibypudqslirwoyybcgmcc/1108.ts?rlkey=6wjvbtc0ijw3wrefj3qdy606n&st=5098fycb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ibypudqslirwoyybcgmcc/1108.ts?rlkey=6wjvbtc0ijw3wrefj3qdy606n&st=5098fycb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+       <!-- ✅  زر الفيلم -->  
+      <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1109-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/u5psahdhsdcfga7nsbx0z/1109.ts?rlkey=xop3wx78wqcw4qf1dbmh7hk47&st=73lwhywf&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/u5psahdhsdcfga7nsbx0z/1109.ts?rlkey=xop3wx78wqcw4qf1dbmh7hk47&st=73lwhywf&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/u5psahdhsdcfga7nsbx0z/1109.ts?rlkey=xop3wx78wqcw4qf1dbmh7hk47&st=73lwhywf&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>    
+ <!-- ✅  زر الفيلم -->
+       <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1108-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ibypudqslirwoyybcgmcc/1108.ts?rlkey=6wjvbtc0ijw3wrefj3qdy606n&st=5098fycb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ibypudqslirwoyybcgmcc/1108.ts?rlkey=6wjvbtc0ijw3wrefj3qdy606n&st=5098fycb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ibypudqslirwoyybcgmcc/1108.ts?rlkey=6wjvbtc0ijw3wrefj3qdy606n&st=5098fycb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>   
+       <!-- ✅  زر الفيلم -->  
+      <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1110-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ao5kpxdm9h6jjqfxqgw5s/conans25-ep1110.mp4?rlkey=346un8p6a36no1ucr33uiiwhs&st=7q2hoiwt&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ao5kpxdm9h6jjqfxqgw5s/conans25-ep1110.mp4?rlkey=346un8p6a36no1ucr33uiiwhs&st=7q2hoiwt&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ao5kpxdm9h6jjqfxqgw5s/conans25-ep1110.mp4?rlkey=346un8p6a36no1ucr33uiiwhs&st=7q2hoiwt&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>     
+ <!-- ✅  زر الفيلم -->  
+       <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1111-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/xt5b41y76iuebxesj6mjr/conans25-ep1111.ts?rlkey=okvuhqwh8ohpk0qlfahx3347o&st=00656dyf&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/xt5b41y76iuebxesj6mjr/conans25-ep1111.ts?rlkey=okvuhqwh8ohpk0qlfahx3347o&st=00656dyf&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/xt5b41y76iuebxesj6mjr/conans25-ep1111.ts?rlkey=okvuhqwh8ohpk0qlfahx3347o&st=00656dyf&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>  
+       <!-- ✅  زر الفيلم -->   
+          <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1112-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/khvlqj14so6l0y2ybyxc9/conans25-ep1112.mp4?rlkey=j9dtuvyqd2lmn5ossg2f0gqes&st=yti4s01m&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/khvlqj14so6l0y2ybyxc9/conans25-ep1112.mp4?rlkey=j9dtuvyqd2lmn5ossg2f0gqes&st=yti4s01m&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/khvlqj14so6l0y2ybyxc9/conans25-ep1112.mp4?rlkey=j9dtuvyqd2lmn5ossg2f0gqes&st=yti4s01m&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>  
+       <!-- ✅  زر الفيلم -->   
+                 <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1113-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/9ml6hh7ul3oeyjemc5f4s/conans25-ep1113.ts?rlkey=73u1l2ptbzprzzbbw2eo8fzal&st=bbcszd61&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/9ml6hh7ul3oeyjemc5f4s/conans25-ep1113.ts?rlkey=73u1l2ptbzprzzbbw2eo8fzal&st=bbcszd61&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/9ml6hh7ul3oeyjemc5f4s/conans25-ep1113.ts?rlkey=73u1l2ptbzprzzbbw2eo8fzal&st=bbcszd61&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>  
+       <!-- ✅  زر الفيلم -->   
+                        <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1114-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/5skkp7wrcjsdsigst87pj/conans25-ep1114.ts?rlkey=8soplpk9ibdsx9e8qzk159utv&st=3amwxetr&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/5skkp7wrcjsdsigst87pj/conans25-ep1114.ts?rlkey=8soplpk9ibdsx9e8qzk159utv&st=3amwxetr&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/5skkp7wrcjsdsigst87pj/conans25-ep1114.ts?rlkey=8soplpk9ibdsx9e8qzk159utv&st=3amwxetr&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>  
+       <!-- ✅  زر الفيلم -->  
+                               <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1115-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dldropbox.com/scl/fi/jjcm8k1rzlflzr2g10eym/conans25-ep1115.ts?rlkey=x0yvr3fledsaw3e394byvl0rp&st=fykrt7eh&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/jjcm8k1rzlflzr2g10eym/conans25-ep1115.ts?rlkey=x0yvr3fledsaw3e394byvl0rp&st=fykrt7eh&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/jjcm8k1rzlflzr2g10eym/conans25-ep1115.ts?rlkey=x0yvr3fledsaw3e394byvl0rp&st=fykrt7eh&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>  
+       <!-- ✅  زر الفيلم --> 
+                               <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1116-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/20iabfasgxezczbelphpi/conans25-ep1116.ts?rlkey=j6e4wno5mjc3qg7jfu9ldinjx&st=d4k0nsx8&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/20iabfasgxezczbelphpi/conans25-ep1116.ts?rlkey=j6e4wno5mjc3qg7jfu9ldinjx&st=d4k0nsx8&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/20iabfasgxezczbelphpi/conans25-ep1116.ts?rlkey=j6e4wno5mjc3qg7jfu9ldinjx&st=d4k0nsx8&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>  
+       <!-- ✅  زر الفيلم -->   
+                                      <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1117-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/m6qrh1a3e87gl93529uwg/conans25-ep1117.ts?rlkey=onzjju09qjfr71414urolkk1x&st=np2c2sni&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/m6qrh1a3e87gl93529uwg/conans25-ep1117.ts?rlkey=onzjju09qjfr71414urolkk1x&st=np2c2sni&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dldropbox.com/scl/fi/m6qrh1a3e87gl93529uwg/conans25-ep1117.ts?rlkey=onzjju09qjfr71414urolkk1x&st=np2c2sni&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button> 
+       <!-- ✅  زر الفيلم -->  
+                                             <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1118-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/qjm8aqmi2uea432zuuwtw/conans25-ep1118.ts?rlkey=7wey00uwb61mrz5o5bwgk50zy&st=xu9g75oe&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/qjm8aqmi2uea432zuuwtw/conans25-ep1118.ts?rlkey=7wey00uwb61mrz5o5bwgk50zy&st=xu9g75oe&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/qjm8aqmi2uea432zuuwtw/conans25-ep1118.ts?rlkey=7wey00uwb61mrz5o5bwgk50zy&st=xu9g75oe&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم -->  
+                                                    <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1119-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/a8odmuxbrt4aiji996fdo/conans25-ep1119.ts?rlkey=bspsn71ds905yyluzpkskdwhz&st=xk8jbiz6&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/a8odmuxbrt4aiji996fdo/conans25-ep1119.ts?rlkey=bspsn71ds905yyluzpkskdwhz&st=xk8jbiz6&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/a8odmuxbrt4aiji996fdo/conans25-ep1119.ts?rlkey=bspsn71ds905yyluzpkskdwhz&st=xk8jbiz6&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم -->  
+                                                           <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1120-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dldropbox.com/scl/fi/imh3jq38d4vr7kniy29o9/conans25-ep1120.ts?rlkey=f1mhkui9zvkvqspqguefg6rcr&st=rsr7xjta&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/imh3jq38d4vr7kniy29o9/conans25-ep1120.ts?rlkey=f1mhkui9zvkvqspqguefg6rcr&st=rsr7xjta&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/imh3jq38d4vr7kniy29o9/conans25-ep1120.ts?rlkey=f1mhkui9zvkvqspqguefg6rcr&st=rsr7xjta&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم --> 
+                                                            <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1121-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/uvce557yh2frtvvyvaw38/conans25-ep1121.ts?rlkey=dj4uvjgj51tyhok2kpe8gm3wa&st=f6pz6odw&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/uvce557yh2frtvvyvaw38/conans25-ep1121.ts?rlkey=dj4uvjgj51tyhok2kpe8gm3wa&st=f6pz6odw&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/uvce557yh2frtvvyvaw38/conans25-ep1121.ts?rlkey=dj4uvjgj51tyhok2kpe8gm3wa&st=f6pz6odw&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم -->   
+                                                                   <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1122-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/xg0f5jsdysdktusn0uiy9/Detective.Conan.S25E1122.mp4?rlkey=bj59wlan078lxjdtxwnw7nqm6&st=kn7ecjic&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/xg0f5jsdysdktusn0uiy9/Detective.Conan.S25E1122.mp4?rlkey=bj59wlan078lxjdtxwnw7nqm6&st=kn7ecjic&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/xg0f5jsdysdktusn0uiy9/Detective.Conan.S25E1122.mp4?rlkey=bj59wlan078lxjdtxwnw7nqm6&st=kn7ecjic&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم -->    
+               <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1123-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/m3np2kdb2isqihw4djgnd/Detective.Conan.S25E1123.mp4?rlkey=qxu6zl7bgh4nazyvdxnlb6w72&st=u1vpovyb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/m3np2kdb2isqihw4djgnd/Detective.Conan.S25E1123.mp4?rlkey=qxu6zl7bgh4nazyvdxnlb6w72&st=u1vpovyb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/m3np2kdb2isqihw4djgnd/Detective.Conan.S25E1123.mp4?rlkey=qxu6zl7bgh4nazyvdxnlb6w72&st=u1vpovyb&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم --> 
+                      <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1124-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ahc68p80ngseasvuf6reg/Detective.Conan.S25E1124.mp4?rlkey=58ckn51o8o3aeo1b3wrbylrr4&st=wshpmutu&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ahc68p80ngseasvuf6reg/Detective.Conan.S25E1124.mp4?rlkey=58ckn51o8o3aeo1b3wrbylrr4&st=wshpmutu&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/ahc68p80ngseasvuf6reg/Detective.Conan.S25E1124.mp4?rlkey=58ckn51o8o3aeo1b3wrbylrr4&st=wshpmutu&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم -->    
+                             <button class="button">
+    <img src="https://raw.githubusercontent.com/ahmadmk2023/Movies-anime/refs/heads/main/BST/Conan-S25.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+        <div class="tv-name-inner" >episodes-1125-</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/c7t6q56uqfnb6e1x16wl3/Detective.Conan.S25E1125.mp4?rlkey=glcvcb9qslmmr7dhww3b1ulo7&st=04x5bajl&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="0">HD</div>
+
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/c7t6q56uqfnb6e1x16wl3/Detective.Conan.S25E1125.mp4?rlkey=glcvcb9qslmmr7dhww3b1ulo7&st=04x5bajl&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="0">HD</div>
+     
+<div class="number" 
+   data-link="intent://dl.dropbox.com/scl/fi/c7t6q56uqfnb6e1x16wl3/Detective.Conan.S25E1125.mp4?rlkey=glcvcb9qslmmr7dhww3b1ulo7&st=04x5bajl&dl=0#Intent;scheme=https;package=co.wuffy.player;end" onclick="playStream(this)" 
+     id="btn3" 
+     tabindex="0">HD</div>
+ </div ></button>
+       <!-- ✅  زر الفيلم -->   
+       <!-- ✅  زر الفيلم -->         
+       <!-- ✅  زر الفيلم -->   
+       <!-- ✅  زر الفيلم -->               
+       <!-- ✅  زر الفيلم -->   
+       <!-- ✅  زر الفيلم -->         
+       <!-- ✅  زر الفيلم -->   
+       <!-- ✅  زر الفيلم -->         
+       <!-- ✅  زر الفيلم -->   
+       <!-- ✅  زر الفيلم -->  
+       
+       
+   <h1 id="no-results" style="display: none; color: #fff; text-align: center; font-size: 20px; font-weight: bold;">لم يتم العثور على نتائج⚠️</h1>
+</div>
+</div>
+ </main> 
+
+<audio id="hoverSound" src="https://github.com/ahmadmk2023/Movies-free1/raw/refs/heads/main/mp3/btn-hover03.mp3" preload="auto"></audio>
+ 
+ <script>
+    // تشغيل الصوت عند التأشير أو التركيز
+    const sound = document.getElementById('hoverSound');
+    const categories = document.querySelectorAll('.number,.topnav a');
+
+    categories.forEach(cat => {
+      cat.addEventListener('mouseenter', () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+      cat.addEventListener('focus', () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+
+    // معالجة أخطاء تحميل الصور الخلفية
+  const fallbackImage = 'https://raw.githubusercontent.com/aminemk640/Movies-free/refs/heads/main/00.png';
+
+  // انتظر تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+      img.onerror = function () {
+        this.src = fallbackImage;
+        this.onerror = null; // منع التكرار
+      };
+    });
+  });
+  </script>
+<script>
+  const packageName = "co.wuffy.player";
+  const playStream = (element) => {
+    const streamLink = element.getAttribute("data-link");
+
+    // محاولة فتح التطبيق باستخدام intent
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = streamLink;
+    document.body.appendChild(iframe);
+
+    let playStoreRedirected = false;
+
+    // إذا لم يغادر المستخدم الصفحة بعد فترة قصيرة
+    setTimeout(() => {
+      document.body.removeChild(iframe);
+
+      if (document.visibilityState === "visible" && !playStoreRedirected) {
+        // إذا بقي المستخدم في الصفحة، يتم تحويله إلى متجر Google Play
+        playStoreRedirected = true;
+        const playStoreIntent = `intent://details?id=${packageName}#Intent;scheme=market;package=com.android.vending;end`;
+        window.location.href = playStoreIntent;
+      }
+    }, 1000); // زمن انتظار قصير (1 ثانية)
+  };
 </script>
-  
-  
+
+
+
+ 
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchbar = document.getElementById("searchbar");
+    const closeIcon = document.getElementById("close-icon");
+    const searchIcon = document.getElementById("search-icon");
+    const noResults = document.getElementById("no-results");
+    const buttons = document.querySelectorAll(".button");
+
+    if (searchIcon && searchbar && closeIcon && noResults) {
+        // ✅ فتح شريط البحث عند الضغط على أيقونة البحث
+        searchIcon.addEventListener("click", function () {
+            searchbar.classList.add("show");
+            closeIcon.classList.add("show");
+            searchbar.focus();
+        });
+
+        // ✅ إغلاق شريط البحث عند الضغط على زر الإغلاق أو خارج شريط البحث
+        function closeSearchBar() {
+            if (searchbar.classList.contains("show")) {
+                searchbar.classList.remove("show");
+                closeIcon.classList.remove("show");
+                noResults.style.display = "none";
+                searchbar.value = ""; // مسح البحث
+                buttons.forEach(button => button.classList.remove("hidden")); // إظهار جميع الأزرار
+            }
+        }
+
+        closeIcon.addEventListener("click", closeSearchBar);
+        document.addEventListener("click", function (event) {
+            if (!searchbar.contains(event.target) && !searchIcon.contains(event.target) && !closeIcon.contains(event.target)) {
+                closeSearchBar();
+            }
+        });
+
+        // ✅ إغلاق شريط البحث عند الضغط على زر Escape
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                event.preventDefault(); // منع أي تأثيرات أخرى
+                closeSearchBar();
+            }
+        });
+
+        // ✅ البحث وإظهار النتائج
+        searchbar.addEventListener("input", function () {
+            const input = searchbar.value.trim().toLowerCase();
+            let found = false;
+
+            buttons.forEach(button => {
+                if (button.textContent.toLowerCase().includes(input)) {
+                    button.classList.remove("hidden");
+                    found = true;
+                } else {
+                    button.classList.add("hidden");
+                }
+            });
+
+            // ✅ إظهار أو إخفاء رسالة "لم يتم العثور على نتائج"
+            noResults.style.display = found ? "none" : "block";
+        });
+    }
+});
+
+
+    //✅ دالة التعامل مع خطأ تحميل الصورة
+    function handleImageError(img) {
+        // تغيير مصدر الصورة إلى صورة بديلة في حال حدوث خطأ في تحميل الصورة الأصلية
+        img.src = "https://raw.githubusercontent.com/aminemk640/Movies-free/refs/heads/main/00.png";
+        img.onerror = null; // إيقاف محاولة تحميل الصورة مرة أخرى
+    }
+</script>
+
+
 </body>
 </html>
-
