@@ -3,61 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies the media</title>
-  <link href="https://cdn.icon-icons.com/icons2/125/PNG/96/movies_drive_20265.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <title>Detective.Conan.S10</title>
+  <link href="https://raw.githubusercontent.com/aminemk640/Movies-free/refs/heads/main/00.png" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>  
-<script src="https://rawcdn.githack.com/ahmadmk2023/LIVE-SORT/8dc8ab39981cbefec033b87a1d179b6eafc6989d/watched-icon.js"></script>  
- </head>
- <body>
- <html>
-
+ <!-- إضافة jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     <!-- إضافة watched-icon -->
+    <script src="https://raw.githack.com/ahmadmk2023/code-java/main/watched-icon-V2.js"></script>  
+ </head>   
+<body>
 
     <!----------  اكواد استايل القائمة  ------------>
-    <style>
+     <style>
          body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-   z-index: 999; /* لضمان ظهوره فوق المحتوى */
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
         }
 
-        .topnav {
-          position: fixed;
-overflow: hidden;
-border-radius:4px;
-   background-image: linear-gradient(132deg, #3c4a71 0%, #339a8a 100%);
-z-index: 999; /* لضمان ظهوره فوق المحتوى */
-top: 0;
-height: 52px;
-width: 100%;
-box-shadow: 5px 5px 7px #fff;
-z-index: 1;
+        .topnav { 
+        border-top : 3px solid #FFD700;  
+        z-index: 2; /* لضمان ظهوره فوق المحتوى */
+        position: fixed;
+        overflow: hidden;
+        border-radius:4px;
+        background-image: linear-gradient(132deg, #3c4a71 0%, #339a8a 100%);
+        top: 0;
+        height: 58px;
+        width: 100%;
+        box-shadow: 5px 5px 7px #fff;
 }  
 
         .topnav a {
             float: left;
             color: #ffffff;
             text-align: center;
-            padding: 14px 16px;
+            padding: 13px 13px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 16px;
         }
-       .topnav a:focus,.topnav a:hover {
-            background-color: #ccc; /* يمكنك تغيير اللون إلى أي لون تفضله */
-            color: #000; /* تغيير لون النص إلى اللون المناسب للخلفية */
-            outline: none; /* إزالة تأثير الـ focus الافتراضي */
-            border-radius: 8px; border: 2px solid #ff0066;
-        }
+       .topnav a:focus, .topnav a:hover {
+ background: #ccc;
+    color: #000;
+    outline: none;
+    border: 2px solid #ff0066;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066, 0 0 160px #ff0066, 0 0 320px #ff0066;  
+}
+.topnav a:focus svg path,
+.topnav a:hover svg path {
+  fill: #000; /* تغيير لون الملء للمسار إلى الأسود */
+  outline: none; /* إزالة تأثير التركيز الافتراضي */
+  border-radius: 8px;
+  border: 2px solid #ff0066;
+}
         .topnav-centered a {
-
+            font-family: "Airarabia", Sans-serif;
             float: none;
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 50%;            
+            font-size: 20px;
             transform: translate(-50%, -50%);
         }
 
@@ -81,10 +90,8 @@ z-index: 1;
                 color: #ffff;
             }
         }
-    </style>
 
-    
-    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
    body {
                 height: 100%;
                 margin: auto;
@@ -92,108 +99,95 @@ z-index: 1;
            background:#339a8a;
              background-position: center;
                 align-items: center;
-                justify-content: center;
+                justify-content: center; 
+                font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
            
             }
 
            .button {
-                 position: relative;
-                align:center;
-                display: inline-block; /* لجعل الزر عنصراً مستطيل الشكل */
+            position: relative; 
+            display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 16px;
+      padding: 20px;
+            align:center;
+            display: inline-block; /* لجعل الزر عنصراً مستطيل الشكل */
             padding:2px; /* تعيين الهامش الداخلي للزر */
             border-radius: 8px; /* تدوير الزوايا لتصميم أفضل */
             width: 155px;
-            height: 215px;
-                margin: 6px;
-              border-color: #000;
-                 background: #3c4a71; 
+            height:225px;
+            margin: 6px;
+            border: 2px solid #ccc;
+            background: rgba(0, 0, 0, 0.6);
+
             }
-
- 
-
-          button img {
-         width: 100%; /* تحكم في عرض الصورة */
-    height: 105px; /* احتفاظ بالتناسب أثناء تغيير الحجم */
-    margin: -1px auto; /* تحكم في التباعد بين الصورة والعناصر الأخرى */
-    display: block; /* جعل الصورة تظهر بشكل مستقل */
-    border-radius: 4px; /* تحديد إطار بسمك 2 بكسل ولون أزرق */
-
+          .button img {
+  background-size: cover; /* جعل الصورة تمتد لتغطي الحاوية بالكامل */
+    background-position: center;    
+    background-size: 100% 100%; /* جعل الصورة تمتد لتغطي الحاوية بالكامل */
+    background-repeat: no-repeat; /* منع تكرار الصورة */
+    width: 100%; /* ضمان أن العرض 100% */
+    height: 105px; /* تعديل الارتفاع حسب الحاجة */
+    position: relative; /* إضافة لتحديد موضع العناصر داخل الحاوية */
+    border-radius: 4px; /* تدوير الزوايا لتصميم أفضل */
 }
- #remot:focus,#remot:hover {
-         background: #ccc; /* لون	 خلفية الزر */
-         color: #000 ;
-          border-radius: 50%;
-          outline: none; /* إزالة تأثير الـ focus الافتراضي */
-             border: 2px solid #ff0066;
-            transform: scale(1.5);
-        }
+
   
             /* .ازالة شريط التمرير اسفل المدونة*/
-            html {
-                
-            }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-            /* ازالة تغيير شكل السكرول بار Scroll.Bar */
-            ::-webkit-scrollbar {
-                width: 8px;
-                height: 105px;
-               overflow-x: hidden; 
-                /**  تغير  لون القائمة **/
-            }
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 7px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  border-radius: 10px;
+}
 
-            ::-webkit-scrollbar-thumb {
-                -webkit-shadow: inset 0 0 0 #000000;
-                -webkit-border-radius: 0;
-                background-image: -webkit-linear-gradient(top, #111 100%, #000 100%);border-radius: 12px;
-            }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
 
-            ::-webkit-scrollbar-track {
-                -webkit-shadow: inset 0 0 0 #000000;
-                -webkit-border-radius: 100px;
-            }
-
-.lkhat1 {
-position: relative; 
-        align:center;
-        padding:2px; /* تعيين الهامش الداخلي للزر */
-        text-align: center;
-        font-size: 15px;
-       color: #fff;
-         font-weight: bold  ;
-     margin-top: 5px ;
-      align-items: center;
-      justify-content: center;
-    width: 140px;
-    height: 18px;
+.link,.tv-name-inner {
+ padding: 3px;
+    text-align: center;
+    font-size: 18px;
+     color: #fff;
+    font-family: "Airarabia", Sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
     border-radius: 8px;
-   border:2px solid gold;
-      
-      
+    top:-10px;
+    border-top: 2px solid #d0368a;
+    margin-top:4px;
+    width: 140px; /* عرض الحاوية */
+    height: 20px;
         }
-        
-.khlfia {
-    background: #fff; /* لون	 خلفية الزر */
-    position: relative;
-    padding:2px; /* تعيين الهامش الداخلي للزر */
-        text-align: center;
-        font-size: 15px;
-       color: #000;
-         font-weight: bold  ;
-      margin-top: 5px;
-      align-items: center;
-      justify-content: center;
-    width: 140px;
-    height: 18px;
-    border-radius: 4px;
-   border:2px solid #000;
-        }      
-
-      .number-container {
+       .mov-name {
+    direction: ltr;  /* تحديد اتجاه النص من اليمين لليسار */
+    text-align: right;  /* محاذاة النص إلى اليمين */
+  }
+   
+     .number-container {
             display: flex;
             justify-content: space-around;
             width: 100%;
-            margin-top: 5px;
-          
+            margin-top: 5px;  
         }
 
         .number {
@@ -201,15 +195,28 @@ position: relative;
             width: 30px;
             height: 30px;
              background:#339a8a;
-            border-radius: 50%;
-             border:3px solid #333;
+            border-radius: 8px;
+             border: 2px solid #fff;
             color: #FFF;
-         font-size: 12px;
-         font-weight: bold  ;
+         font-family: "Airarabia", Sans-serif;
+    font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+        }
+        
+       /* تأثير عند التركيز (للتحكم عن بُعد على Android TV) */
+   
+ .number:focus,.number:hover {
+    background: #ccc;
+    color: #000;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #ff0066;
+    transform: scale(1.5);
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066, 0 0 160px #ff0066, 0 0 320px #ff0066;
         }
 
        a{
@@ -221,71 +228,199 @@ color: yellow;
 text-decoration:none;
 
 }
-                #page {
-            margin-top: 55px;
-            width: 100%;
-        }
+   main {
+    padding: 5px;position: relative;
+    margin-top: 60px; /* تترك مساحة للشريط العلوي */
+    margin-bottom: 70px; /* تترك مساحة للقائمة السفلية */
+}
         
-                
-/* تظهر الأيقونة أعلى الزجاجية */
-.watched-icon {
-    position: absolute;
-    top: 0;
-    left: 0; /* يمكنك ضبط القيمة الأفضل حسب تصميمك */
-    width: 20px;
-    height: 20px;
-     /* لجعلها تظهر فوق الزجاجية */
-    background:#fff; /* لخلفية زجاجية بلون أبيض شفاف */
-    border-radius: 5px; /* للزوايا المستديرة */
-    border:2px solid #000;
-    padding: 5px; /* تعديل حجم الأيقونة داخل الزجاجية */
-}
-.watched-icon-img{
+   
+        tv-name-inner {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+ font-family: "Arial", sans-serif;  /* اختيار خط مناسب للغة العربية */
 
-    width: 25px;
-    height: 25px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+  
+#searchbar-container {
+    position: relative;
+    width: 70%;
+    margin: 10px auto;
+    direction: rtl;
+
+}
+ #searchbar:focus,#searchbar:hover {
+       background: #ccc;
+    color: #000;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #ff0066;
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066;
+    }
+#searchbar {
+    width: 100%;
+    padding: 10px;margin-top:10px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 35px;
+    border: 2px solid gold;
+    box-sizing: border-box;
+    display: none; /* Initially hide the search bar */
+}
+
+#searchbar.show {
+    display: inline-block;
+}
+
+
+.x{
+    background: #2222;
+        position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none; /* Initially hide the close icon */
+    color: #000;
+    top:27px;
+    left:5px;
+    font-size: 16x;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #000;
+box-shadow: 0 0 5px #000;
+        }
+.x:focus,.x:hover {
+    background: #2222;
+    color: #000;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #ff0066;
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066;
+        }
+#close-icon.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+    .search-input {
+    padding: 8px;
+    font-size:15px; 
+     font-weight: bold  ;
+         color: #000;
+
+     }
     
+    #no-results-message { 
+    color: red;              
+    font-family: "Montserrat", serif;
+    margin-top: 10px;
+    font-size: 25px; 
+     font-weight: bold;
+     }
+     
+    /* تظهر الأيقونة أعلى الزجاجية */
+        .watched-icon {
+            position: absolute; 
+            background: #fff;
+            border-radius: 4px;
+            border: 2px solid #ff0066;
+            box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFD700;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            display: none; /* Initially hide the watched icon */
+        } 
+          #fin:last-child {
+    border-bottom: none;
+    color: #FFD700;
+    font-weight: bold;
+    
+    transition-delay: 0s, 1s;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066;
 }
-
                 </style>
                 
                 
           <!-- Top navigation -->
             <div class="topnav">
-                <!-- ISIM TATBI9 -->
-                <div class="topnav-centered">
-                 <a><h5>المحقق كونان الموسم 10</h5> </a>
-                </div>
-                <!-- ISIM TATBI9 -->
+               <!-- icon-reply -->
+<div class="topnav-centered">
+                 <a><h5>كونان الموسم 10</h5> </a></div>
+               <!-- icon-reply -->
 
-                <!-- ZIR ROJO3 -->
-                <a href="go:afmv ">
-                    <i  class="fa fa-reply fa-beat"style="font-size: 20px;"></i>
+                  <!-- icon-reply -->
+                <a onclick="window.open('go:1')"tabindex="0">
+    <svg width="25" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path d="M209.4 39.5c-9.1-9.6-24.3-10-33.9-.9L33.8 173.2c-19.9 18.9-19.9 50.7 0 69.6L175.5 377.4c9.6 9.1 24.8 8.7 33.9-.9s8.7-24.8-.9-33.9L66.8 208 208.5 73.4c9.6-9.1 10-24.3 .9-33.9zM352 64c0-12.6-7.4-24.1-19-29.2s-25-3-34.4 5.4l-160 144c-6.7 6.1-10.6 14.7-10.6 23.8s3.9 17.7 10.6 23.8l160 144c9.4 8.5 22.9 10.6 34.4 5.4s19-16.6 19-29.2l0-64 32 0c53 0 96 43 96 96c0 30.4-12.8 47.9-22.2 56.7c-5.5 5.1-9.8 12-9.8 19.5c0 10.9 8.8 19.7 19.7 19.7c2.8 0 5.6-.6 8.1-1.9C494.5 467.9 576 417.3 576 304c0-97.2-78.8-176-176-176l-48 0 0-64z"></path>
+    </svg>
                 </a>
-                <!-- ZIR ROJO3 -->
-
-<img src="https://cdn.icon-icons.com/icons2/12/PNG/256/movies_movie_oscar_themedia_1735.png"style="width: 45px;
-    height: 38px; margin-top: 7px;border-radius: 8px;" alt="beIN MAX">
-                <!-- ZIR LBAHT-search -->
+                   <!-- icon-reply -->
+                   
+                 <!-- icon-logo -->
+<a > <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="24px"viewBox="0 0 24 24" height="24px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M18 4l2 3h-3l-2-3h-2l2 3h-3l-2-3H8l2 3H7L5 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4m-6.75 11.25L10 18l-1.25-2.75L6 14l2.75-1.25L10 10l1.25 2.75L14 14l-2.75 1.25m5.69-3.31L16 14l-.94-2.06L13 11l2.06-.94L16 8l.94 2.06L19 11l-2.06.94z" fill="#fff"></path></svg>
+        </a>
+      
+   <!-- icon-logo -->
                 
-                
-                <div class="topnav-right">
-                    <a href="http://action_search/"><i class="fa fa-search fa-beat" style="font-size: 20px;"></i></a>
-                    <!-- ZIR LBAHT-search -->
+   <!-- icon-search -->                
+<div class="topnav-right">
+<a tabindex="1" href="javascript:void(0)" id="search-icon"><svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" width="25" height="25" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#fff" stroke-width="4" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+            </svg></a></div> </div>
+  
+            
+       <main>     
 
-                </div>
-
-            </div>              
-
-<div align="center" >
-<div class="container">
-<div id="page">
-<div class="section" data-section="Conan-S10">
+<div align="center" id="searchbar-container">
+    <input id="searchbar" 
+           onkeyup="search_animal();" 
+           type="text" 
+           name="search" 
+           placeholder="ابحث عن الحلقه او رقم .." 
+           tabindex="1">
+<button tabindex="1"id="close-icon"class="x">❌</button></div>
+              <!--+++++++++++++++++-->
+              <div class="section" data-section="Conan-S10">
+ 
+        <!--+++++++++++++++++--> 
+      <div align="center" >
+      <!-- ✅  زر الفيلم -->
+                              
         <!--+++++++++++++++++-->  
          
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 1</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 01</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  <div> 
+<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
+</div>
+   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvdGhnMXlvNDlxcmhiNWJmeWRrMnBuL0RldGVj
+dGl2ZS5Db25hbi5TMTAtNDYxLnRzP3Jsa2V5PTYxa2l3bmlucHBtdzZ5cWp5Nzk3em0wemsmZGw9
+MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
+
+<a href="https://dl.dropbox.com/scl/fi/thg1yo49qrhb5bfydk2pn/Detective.Conan.S10-461.ts?rlkey=61kiwninppmw6yqjy797zm0zk&dl=0"><div id="remot" tabindex="1" class="number">2</div></a>
+
+<a href="https://streamzid.online/e/ri5squn8m6vs"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
+      <!-- ✅  زر الفيلم -->
+
+ <button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 1</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -299,9 +434,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
                <!--+++++++++++++++++-->                          
         <!--+++++++++++++++++-->  
          
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 2</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 2</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -314,9 +449,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/ri5squn8m6vs"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 3</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 3</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -329,9 +464,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/r8vj5iy5fg2j"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 4</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 4</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -347,9 +482,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/1rmpb2svyfzh"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
                <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 5</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 5</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -366,9 +501,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
     
                <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 6</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 6</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -384,9 +519,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/wj0hvp8wqwr1"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
            
                   <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 7</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 7</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -401,9 +536,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/9xw4uciglvc2"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                      <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 8</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 8</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -418,9 +553,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/461ev27cbrdh"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 9</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 9</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -435,9 +570,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/u4c2vdqnlr7b"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 10</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 10</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -453,9 +588,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/84dfpkh4gb4o"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 11</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 11</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -472,9 +607,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 12</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 12</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -490,9 +625,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/d9ksypuj0f76"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 13</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 13</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -509,9 +644,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 14</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 14</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -526,9 +661,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/p70cuoqmb31n"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 15</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 15</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -544,9 +679,9 @@ MAoKCgoK#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabind
 <a href="https://streamzid.online/e/anddh28u911s"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 16</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 16</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -562,9 +697,9 @@ MAoKCgo=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabind
 <a href="https://streamzid.online/e/42yl1qw1u69g"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 17</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 17</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -579,9 +714,9 @@ MAoKCg==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabind
 
 <a href="https://streamzid.online/e/hcld1uqxxl6n"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
                       <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 18</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 18</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -597,9 +732,9 @@ PTAKCg==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabind
 <a href="https://streamzid.online/e/gr8qv1gy2beg"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 19</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 19</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -614,9 +749,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/n99y5orhtpse"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 20</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 20</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -631,9 +766,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/cr3jzbggv2lf"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 21</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 21</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -648,9 +783,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/mufiypp1efav"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 22</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 22</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -666,9 +801,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/232w880c5t3t"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button> 
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 23</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 23</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -683,9 +818,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/yxonij2hp3jq"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 24</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 24</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -700,9 +835,9 @@ MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/6s2rdnpmr62v"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 25</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 25</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -717,9 +852,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/qfuf52huqnbf"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 26</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 26</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -734,9 +869,9 @@ PTA=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/d778xz2nnljc"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 27</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 27</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -751,9 +886,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/b6mrgqnpuxms"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 28</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 28</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -769,9 +904,9 @@ ZGw9MA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabind
 <a href="https://streamzid.online/e/ke2wyurbepuj"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 29</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 29</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -787,9 +922,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/2wu4nh9vbii3"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 30</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 30</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -804,9 +939,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/p0rjnp2bx443"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 31</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 31</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -822,9 +957,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/rywvneuf1i33"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 32</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 32</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -839,9 +974,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/bmskeo1au0eq"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 33</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 33</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -857,9 +992,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/5owbew3hhnhh"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 34</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 34</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -874,9 +1009,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 
 <a href="https://streamzid.online/e/247i2danclos"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 35</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 35</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -892,9 +1027,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/qc6xdobdbrqx"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 36</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 36</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -910,9 +1045,9 @@ bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="
 <a href="https://streamzid.online/e/k52zlju6jcxi"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
 
  <!--+++++++++++++++++-->      
-<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg" alt="app tv">
-        <div class="lkhat1">episode 37</div>
-   <div class="khlfia">  سيرفرات المشاهدة</div> 
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 37</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
                         <!-- إضافة شكل الأرقام الدائرية -->
                         <div class="number-container">  <div> 
 <img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
@@ -926,64 +1061,157 @@ czEwLWVwMzcudHM/cmxrZXk9YnZxYWw2b2V3MTF0ZGZxYnZ4NjliZXFhMCZzdD01bzFpNmpnZyZk
 bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">2</div></a>
 
 <a href="https://streamzid.online/e/buhlhk408d1n"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>
+       <!-- ✅  زر الفيلم -->          
+
+<button class="button"><img src="https://www11.0zz0.com/2023/08/29/20/807302553.jpg"   alt="app tv" onerror="handleImageError(this)">
+        <div class="tv-name-inner">episode 38</div>
+   <div class="link">  سيرفرات المشاهدة</div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  <div> 
+<img class="watched-icon" src="https://i.imgur.com/EPfa2hM.png" alt="Watched Icon" style="display: none;">
+</div>
+   <a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvMDlzcWgzb3h4aHNyeGNkajRsdHBpL2NvbmFu
+czEwLWVwMzcudHM/cmxrZXk9YnZxYWw2b2V3MTF0ZGZxYnZ4NjliZXFhMCZzdD01bzFpNmpnZyZk
+bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">1</div></a>
+
+<a href="intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvMDlzcWgzb3h4aHNyeGNkajRsdHBpL2NvbmFu
+czEwLWVwMzcudHM/cmxrZXk9YnZxYWw2b2V3MTF0ZGZxYnZ4NjliZXFhMCZzdD01bzFpNmpnZyZk
+bD0w#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number">2</div></a>
+
+<a href="https://streamzid.online/e/buhlhk408d1n"><div id="remot" tabindex="1" class="number" >3</div></a></div ></button>       <!-- ✅  زر الفيلم -->          
+                  
+       
+       
+       
+       
+       
+   <h1 id="no-results" style="display: none; color: #fff; text-align: center; font-size: 20px; font-weight: bold;">لم يتم العثور على نتائج⚠️</h1>
+</div>
+</div>
+ </main> 
 
 
+<audio id="hoverSound" src="https://sounds.pond5.com/game-interface-hover-sound-1-sound-effect-221424346_nw_prev.m4a" preload="auto"></audio>
 
-  </div> 
- </div>
-     </div>  
-      </div> </div>
-    <script>
-    // تُحجب النافذة المنبثقة
-window.open('https://javascript.info');
-    
-let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=0,height=0,left=-1000,top=-1000`;
+<script>
+    // تشغيل الصوت عند التأشير أو التركيز
+    const sound = document.getElementById('hoverSound');
+    const categories = document.querySelectorAll('.topnav a ,.number');
 
-open('/', 'test', params);
+    categories.forEach(cat => {
+      cat.addEventListener('mouseenter', () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+      cat.addEventListener('focus', () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
 
+  </script>
+<script>
+  const packageName = "co.wuffy.player";
+  const playStream = (element) => {
+    const streamLink = element.getAttribute("data-link");
 
-let newWindow = open('/', 'example', 'width=300,height=300');
+    // محاولة فتح التطبيق باستخدام intent
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = streamLink;
+    document.body.appendChild(iframe);
 
-newWindow.onload = function() {
-  newWindow.close();
-  alert(newWindow.closed); // true
-};
+    let playStoreRedirected = false;
 
+    // إذا لم يغادر المستخدم الصفحة بعد فترة قصيرة
+    setTimeout(() => {
+      document.body.removeChild(iframe);
 
-
-
-
-    
-export default {
-  name: 'ContentComponent',
-  data() {
-    return {
-      contentUrl: 'https://streamzid.online/e/2wu4nh9vbii3'
-    }
-  },
-  beforeMount() {
-    this.blockPopups()
-  },
-  methods: {
-    blockPopups() {
-      // تعطيل النوافذ المنبثقة
-      window.open = function() {}
-      window.alert = function() {}
-      window.confirm = function() {}
-      window.prompt = function() {}
-    }
-  }
-  // تعطيل جميع النوافذ المنبثقة
-window.open = function() { return null; }
-window.alert = function() { }
-window.confirm = function() { return false; }
-window.prompt = function() { return null; }
-  
-}
+      if (document.visibilityState === "visible" && !playStoreRedirected) {
+        // إذا بقي المستخدم في الصفحة، يتم تحويله إلى متجر Google Play
+        playStoreRedirected = true;
+        const playStoreIntent = `intent://details?id=${packageName}#Intent;scheme=market;package=com.android.vending;end`;
+        window.location.href = playStoreIntent;
+      }
+    }, 1000); // زمن انتظار قصير (1 ثانية)
+  };
 </script>
-  
-  
+
+
+
+ 
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchbar = document.getElementById("searchbar");
+    const closeIcon = document.getElementById("close-icon");
+    const searchIcon = document.getElementById("search-icon");
+    const noResults = document.getElementById("no-results");
+    const buttons = document.querySelectorAll(".button");
+
+    if (searchIcon && searchbar && closeIcon && noResults) {
+        // ✅ فتح شريط البحث عند الضغط على أيقونة البحث
+        searchIcon.addEventListener("click", function () {
+            searchbar.classList.add("show");
+            closeIcon.classList.add("show");
+            searchbar.focus();
+        });
+
+        // ✅ إغلاق شريط البحث عند الضغط على زر الإغلاق أو خارج شريط البحث
+        function closeSearchBar() {
+            if (searchbar.classList.contains("show")) {
+                searchbar.classList.remove("show");
+                closeIcon.classList.remove("show");
+                noResults.style.display = "none";
+                searchbar.value = ""; // مسح البحث
+                buttons.forEach(button => button.classList.remove("hidden")); // إظهار جميع الأزرار
+            }
+        }
+
+        closeIcon.addEventListener("click", closeSearchBar);
+        document.addEventListener("click", function (event) {
+            if (!searchbar.contains(event.target) && !searchIcon.contains(event.target) && !closeIcon.contains(event.target)) {
+                closeSearchBar();
+            }
+        });
+
+        // ✅ إغلاق شريط البحث عند الضغط على زر Escape
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                event.preventDefault(); // منع أي تأثيرات أخرى
+                closeSearchBar();
+            }
+        });
+
+        // ✅ البحث وإظهار النتائج
+        searchbar.addEventListener("input", function () {
+            const input = searchbar.value.trim().toLowerCase();
+            let found = false;
+
+            buttons.forEach(button => {
+                if (button.textContent.toLowerCase().includes(input)) {
+                    button.classList.remove("hidden");
+                    found = true;
+                } else {
+                    button.classList.add("hidden");
+                }
+            });
+
+            // ✅ إظهار أو إخفاء رسالة "لم يتم العثور على نتائج"
+            noResults.style.display = found ? "none" : "block";
+        });
+    }
+});
+
+
+    //✅ دالة التعامل مع خطأ تحميل الصورة
+    function handleImageError(img) {
+        // تغيير مصدر الصورة إلى صورة بديلة في حال حدوث خطأ في تحميل الصورة الأصلية
+        img.src = "https://raw.githubusercontent.com/aminemk640/Movies-free/refs/heads/main/00.png";
+        img.onerror = null; // إيقاف محاولة تحميل الصورة مرة أخرى
+    }
+</script>
+
+
 </body>
 </html>
-
