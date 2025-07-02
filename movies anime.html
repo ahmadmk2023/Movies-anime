@@ -27,7 +27,7 @@
 
         .topnav { 
         border-top : 3px solid #FFD700;  
-        z-index: 2; /* لضمان ظهوره فوق المحتوى */
+        z-index: 22; /* لضمان ظهوره فوق المحتوى */
         position: fixed;
         overflow: hidden;
         border-radius:4px;
@@ -119,7 +119,7 @@
             margin: 6px;
             border: 2px solid #ccc;
             background: #3c4a71; 
-            z-index: 1; /* التأكد من أنه يظهر فوق المحتويات الأخرى */
+            z-index: 0; /* التأكد من أنه يظهر فوق المحتويات الأخرى */
 
             }
           .button img {
@@ -186,7 +186,8 @@
             display: flex;
             justify-content: space-around;
             width: 100%;
-            
+            z-index: 22; /* التأكد من أنه يظهر فوق المحتويات الأخرى */
+
         }
 
         .number {
@@ -204,7 +205,9 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            margin-top: 0px;
+            margin-top: 0px;            
+            z-index: 22; /* التأكد من أنه يظهر فوق المحتويات الأخرى */
+
             
         }
         
@@ -341,7 +344,7 @@ box-shadow: 0 0 5px #fff;
             background: #fff;
             border-radius: 4px;
             border: 2px solid #ff0066;
-            box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 40px #ff0066, 0 0 80px #ff0066, 0 0 160px #ff0066, 0 0 320px #ff0066;
+            box-shadow: 0 0 10px #ff0066, 0 0 20px #0000, 0 0 40px #ff0066, 0 0 80px #ff0066, 0 0 160px #ff0066, 0 0 320px #ff0066;
             top: 0;
             left: 0;
             width: 20px;
@@ -446,7 +449,30 @@ box-shadow: 0 0 5px #fff;
                              
                              <!-- ✅  زر الفيلم -->
                              
-                             <!-- ✅  زر الفيلم -->                               
+                             <!-- ✅  زر الفيلم -->                                                            <button class="button">
+    <img src="https://resizing.flixster.com/lv9MUTt-Qo_iaZbXFnk4Ij_ycRI=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13022653_v_v8_ac.jpg" alt="app tv"onerror="handleImageError(this)">
+     <div class="mov-name">
+<div class="tv-name-inner" >How to Train Your Dragon 3-(2017)-3 كيفية تدريب تنينك</div></div> 
+        <div class="link">سيرفرات المشاهدة</div> 
+           <div class="number-container">
+<div class="number" 
+     data-link="intent://dl.ropbox.com/scl/fi/8rp9h8at6lh6gw9i02yty/How.to.Train.Your-Dragon.3.2017.ts?rlkey=6nexv3an0xk8omgykur9oxdan&st=r34nnmoo&dl=1#Intent;scheme=https;package=co.wuffy.player;end" 
+     onclick="playStream(this)" 
+     id="btn1" 
+     tabindex="1">FHD</div>
+
+<div class="number" 
+     data-link="intent://dl.ropbox.com/scl/fi/8rp9h8at6lh6gw9i02yty/How.to.Train.Your-Dragon.3.2017.ts?rlkey=6nexv3an0xk8omgykur9oxdan&st=r34nnmoo&dl=1#Intent;scheme=https;package=co.wuffy.player;end" 
+     onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="1">HD</div>
+     
+<div class="number" 
+     data-link="intent://dl.ropbox.com/scl/fi/8rp9h8at6lh6gw9i02yty/How.to.Train.Your-Dragon.3.2017.ts?rlkey=6nexv3an0xk8omgykur9oxdan&st=r34nnmoo&dl=1#Intent;scheme=https;package=co.wuffy.player;end" 
+     onclick="playStream(this)" 
+     id="btn2" 
+     tabindex="1">SD</div>
+ </div ></button> 
                              <!-- ✅  زر الفيلم -->
                              <button class="button">
     <img src="https://resizing.flixster.com/agDdiew_iY4Ky5G3mXKvlE4drTA=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10099311_v_v13_az.jpg" alt="app tv"onerror="handleImageError(this)">
@@ -1239,7 +1265,7 @@ data-link="intent://dl.dropbox.com/scl/fi/ka31bamopeo7y8woc1n83/Detective-Conan-
      tabindex="1">HD</div>
  </div ></button> 
   
- <h1 id="no-results" style="display: none; color: #fff; text-align: center; font-size: 20px; font-weight: bold;">لم يتم العثور على نتائج⚠️</h1>
+ <h1 id="no-results" style="display: none;  text-align: center; font-size: 20px; font-weight: bold;">لم يتم العثور على نتائج⚠️</h1>
 
 <div  class="plus"tabindex="1"onclick="window.open('https://raw.githack.com/ahmadmk2023/Movies-free1/main/aflam-mot-02.html')"><h1 class="h1">  المزيد من الأفلام <br> <i class="fa-solid fa-plus"></i></h1></div>
 <br><br>
