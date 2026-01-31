@@ -119,14 +119,21 @@
             flex-direction: column;
             align-items: center;
         }
+ }
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
    body {
                 height: 100%;
                 margin: auto;
                 position: relative;
-           background:#339a8a;
+              background-image: linear-gradient(132deg, #339a8a 0%, #3c4a71 100%);
              background-position: center;
                 align-items: center;
-                justify-content: center;
+                justify-content: center; 
+                font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
            
             }
 h1 {
@@ -164,37 +171,14 @@ h1 {
             }
 
           button img {
-         width: 90%; /* تحكم في عرض الصورة */
-    height: 140px; /* احتفاظ بالتناسب أثناء تغيير الحجم */
+         width: 95%; /* تحكم في عرض الصورة */
+    height: 142px; /* احتفاظ بالتناسب أثناء تغيير الحجم */
     margin: -1px auto; /* تحكم في التباعد بين الصورة والعناصر الأخرى */
     display: block; /* جعل الصورة تظهر بشكل مستقل */
     border-radius: 4px; /* تحديد إطار بسمك 2 بكسل ولون أزرق */
 
 }
 
-            /* .ازالة شريط التمرير اسفل المدونة*/
-            html {
-                
-            }
-
-            /* ازالة تغيير شكل السكرول بار Scroll.Bar */
-            ::-webkit-scrollbar {
-                width: 8px;
-                height: 105px;
-               overflow-x: hidden; 
-                /**  تغير  لون القائمة **/
-            }
-
-            ::-webkit-scrollbar-thumb {
-                -webkit-shadow: inset 0 0 0 #000000;
-                -webkit-border-radius: 0;
-                background-image: -webkit-linear-gradient(top, #111 100%, #000 100%);border-radius: 12px;
-            }
-
-            ::-webkit-scrollbar-track {
-                -webkit-shadow: inset 0 0 0 #000000;
-                -webkit-border-radius: 100px;
-            }
 
 
 
@@ -207,30 +191,30 @@ color: yellow;
 text-decoration:none;
 
 }
-        
+     .button:focus,
+        .button:hover {
+            transform: scale(1.05); /* تكبير طفيف عند التركيز/التمرير */
+            outline: none;
+            border-color: #ff0066;    
+            background:#ccc; /* لخلفية زجاجية بلون أبيض شفاف */
+            color: black;
+            box-shadow: 0 0 15px #ff0066, 0 0 30px #ff0066;
+        }    
                 
 /* تظهر الأيقونة أعلى الزجاجية */
 .watched-icon {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0; /* يمكنك ضبط القيمة الأفضل حسب تصميمك */
     width: 25px;
     height: 25px;
      /* لجعلها تظهر فوق الزجاجية */
     background:#fff; /* لخلفية زجاجية بلون أبيض شفاف */
-    border-radius: 5px; /* للزوايا المستديرة */
+    border-radius: 50%; /* للزوايا المستديرة */
     border:2px solid #000;
     padding: 5px; /* تعديل حجم الأيقونة داخل الزجاجية */
 }
 
- .button:focus,.button:hover {
-         background: #ccc; /* لون	 خلفية الزر */
-         color: #000 ;
-          border-radius: 8px;
-          outline: none; /* إزالة تأثير الـ focus الافتراضي */
-             border: 2px solid #ff0066;
-            transform: scale(1.1);
-        }
   
         /* شريط البحث */
         #searchbar-container {
@@ -355,37 +339,7 @@ text-decoration:none;
           <h1 id="no-results" style="display: none; color: #fff; text-align: center; font-size: 20px; font-weight: bold;">لم يتم العثور على نتائج⚠️</h1>
 
         
-     <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sections = document.querySelectorAll('.section');
-
-  sections.forEach(function(section) {
-    const buttons = section.querySelectorAll('.button');
-    buttons.forEach(function(button, index) {
-      const watchedIcon = button.querySelector('.watched-icon');
-      const episodeNumber = index + 1;
-      const storageKey = `section${section.dataset.section}-watchedIcon${episodeNumber}`;
-      const isWatched = localStorage.getItem(storageKey);
-
-      if (isWatched === "true") {
-        watchedIcon.style.display = "inline";
-      }
-
-     button.addEventListener('click', function () {
-                const isWatched = localStorage.getItem(storageKey);
-
-                if (isWatched === "true") {
-                    watchedIcon.style.display = "inline";
-                } else {
-                    watchedIcon.style.display = "inline";
-                    localStorage.setItem(storageKey, "true");
-                }
-            });
-        });
-    });
-});
-
-</script>              
+           
 
     <a onclick="window.open('intent://dl.dropbox.com/scl/fi/8y53cf7pk9hw5q8evy5kp/E01.mkv?rlkey=vfmtahmils68ery8dez0km5s6&dl=1#Intent;scheme=https;package=co.wuffy.player;end')" rel="nofollow">
     <button class="button">
@@ -395,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </button>
 </a>
 
-<a onclick="window.open('intent://dl.dropbox.com/scl/fi/15scsyo36tey7th2d0be9/E02.mkv?rlkey=njbp35v7epylbqhiviv5x74fi&dl=1#Intent;scheme=https;package=co.wuffy.player;end')" rel="nofollow">
+<a href="javascript:void(0)" onclick="window.open('intent://dl.dropbox.com/scl/fi/15scsyo36tey7th2d0be9/E02.mkv?rlkey=njbp35v7epylbqhiviv5x74fi&dl=1#Intent;scheme=https;package=co.wuffy.player;end')" rel="nofollow">
     <button class="button">
         <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="episode2"onerror="handleImageError(this)">
         <div>episode2</div>
@@ -824,146 +778,240 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div><h1>باقي الحلقات مترجمة</h1></div>
 
-<a onclick="window.open('intent://download2330.mediafire.com/wm8301z90pssfyjg/sayf.nar1.e55.mp4#Intent;scheme=https;package=co.wuffy.player;end')">
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/995/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
     <button class="button">
         <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
         <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
         <div>episode 55</div>
     </button>
 </a>
-<a onclick="window.open('intent://drive.google.com/uc?export=download&id=1VdB8nYgsc1F6vOSk0GKq8JBnn8uDAFXi#Intent;scheme=https;package=co.wuffy.player;end')" class="episode-link">
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/996/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
     <button class="button">
         <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
         <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
-        <div>Episode G-Drive</div>
+        <div>episode 56</div>
     </button>
 </a>
-<a onclick="window.open('https://ok.ru/videoembed/3980826118832?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode56</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
 
-<a onclick="window.open('https://ok.ru/videoembed/3980826708656?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode57</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
 
-<a onclick="window.open('https://ok.ru/videoembed/3980827101872?autoplay=1')" allowfullscreen><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode58</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
- 
-<a  onclick="window.open('https://ok.ru/videoembed/3980827626160?autoplay=1')" frameborder="0"  allowfullscreen><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode59</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>   
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/997/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 57</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/998/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 58</div>
+    </button>
+</a>
+
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/999/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 59</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1000/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 60</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1001/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 61</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1002/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 62</div>
+    </button>
+</a>
+
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1003/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 63</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1004/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 64</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1005/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 65</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1006/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 66</div>
+    </button>
+</a>
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1007/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 67</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1008/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 68</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1009/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 69</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1070/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 70</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1071/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 70</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1072/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 72</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1073/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 73</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1074/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 74</div>
+    </button>
+</a>
+
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1075/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 75</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1076/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 76</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1077/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 77</div>
+    </button>
+</a>
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1078/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 78</div>
+    </button>
+</a>
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1079/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 79</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1080/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 80</div>
+    </button>
+</a>
+
+
+<a onclick="window.open('intent://pegasus.5387692.xyz/api/hls/1081/480p/playlist.m3u8#Intent;scheme=https;package=co.wuffy.player;end')">
+    <button class="button">
+        <img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="poster">
+        <img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;">
+        <div>episode 81</div>
+    </button>
+</a>
 
 
-<a  onclick="window.open('https://ok.ru/videoembed/3980827888304?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode60</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>   
 
 
-<a  onclick="window.open('https://ok.ru/videoembed/3980828281520?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode61</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>   
 
 
-<a  onclick="window.open('https://ok.ru/videoembed/3980828936880?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode62</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
 
 
-<a  onclick="window.open('https://ok.ru/videoembed/3980829264560?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode63</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980829526704?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode64</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980829854384?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode65</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980830313136?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode66</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980830575280?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode67</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980830771888?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode68</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980831034032?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode69</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980831230640?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode70</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980831492784?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode71</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980831820464?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode72</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980832279216?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode73</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980832475824?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode74</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980832737968?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode75</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980833000112?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode76</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980833262256?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode77</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980833786544?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode78</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980834441904?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode79</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980834704048?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode80</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980835097264?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode81</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980835359408?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode82</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980835949232?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode83</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980836407984?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode84</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980836932272?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode85</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980837391024?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode86</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980837587632?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode87</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980837915312?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode88</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980838374064?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode89</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980838636208?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode90</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980839226032?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode91</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980839553712?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode92</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980839750320?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode93</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980840143536?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode94</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980840405680?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode95</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980840929968?autoplay=true"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode96</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980841323184?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode97</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980841781936?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode98</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980842044080?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode99</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980842240688?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode100</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980842830512?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode101</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980843092656?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode102</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980843420336?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode103</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980843944624?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode104</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980844599984?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode105</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980844927664?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode106</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980845320880?autoplay=1')" ><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode107</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('https://ok.ru/videoembed/3980845779632?autoplay=1')"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><div>episode108</div><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
-
-<a  onclick="window.open('intent://aHR0cHM6Ly9kbC5kcm9wYm94LmNvbS9zY2wvZmkvM2lzbm10bHprYTVwMTJsb2pzb25iL0hOSy1T
-MS1FMTA5LUVORC1CRC1IRC14MjY0Lm1wND9ybGtleT00MGdtOW40Z2owMzhwN3dhenppaXp4cWNh
-JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end')"rel="nofollow"><button class="button"><img src="https://raw.githubusercontent.com/aminemk640/tvapp/refs/heads/main/STORE/logo/sayf.jpg" alt="app tv"onerror="handleImageError(this)"><h9>109-الأخيرة</h9><img class="watched-icon" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49831/preview.svg" alt="Watched Icon" style="display: none;"> </button></a>
 
 
  
@@ -974,7 +1022,37 @@ JmRsPTA=#Intent;scheme=xmtv;package=co.wuffy.player;end')"rel="nofollow"><button
 
  </div>
    </div>
+     <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.section');
 
+  sections.forEach(function(section) {
+    const buttons = section.querySelectorAll('.button');
+    buttons.forEach(function(button, index) {
+      const watchedIcon = button.querySelector('.watched-icon');
+      const episodeNumber = index + 1;
+      const storageKey = `section${section.dataset.section}-watchedIcon${episodeNumber}`;
+      const isWatched = localStorage.getItem(storageKey);
+
+      if (isWatched === "true") {
+        watchedIcon.style.display = "inline";
+      }
+
+     button.addEventListener('click', function () {
+                const isWatched = localStorage.getItem(storageKey);
+
+                if (isWatched === "true") {
+                    watchedIcon.style.display = "inline";
+                } else {
+                    watchedIcon.style.display = "inline";
+                    localStorage.setItem(storageKey, "true");
+                }
+            });
+        });
+    });
+});
+
+</script>   
  
 <!-- JavaScript -->
 <script>
